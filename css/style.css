@@ -3,10 +3,13 @@ body {
   font-family: "Montserrat", sans-serif;
   padding: 1rem;
 }
+main {
+  margin-top: 5rem;
+}
 .gr-btn {
   color: #fff;
   display: inline-block;
-  padding: 6px 2rem;
+  padding: .6rem 2rem;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 500;
@@ -30,6 +33,11 @@ body {
 .gr-btn-danger {
   background: linear-gradient(90deg, #e83e8c, #f05743);
 }
+.brand {
+  font-weight: bold; 
+  font-size: 24px;
+  color: coral !important;
+}
 .search-field {
   border: none;
   border-radius: 50px;
@@ -42,19 +50,13 @@ body {
 }
 .search-box {
   border: 1px solid rgb(3, 118, 211);
-  width: 281px;
+  width: 280px;
   border-radius: 5px;
   margin: auto;
-  margin-top: 50px;
   border-right: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.search-button {
-  padding: 10px 50px;
-  border-radius: 25px;
-  margin-left: 20px;
 }
 #all-products {
   display: grid;
