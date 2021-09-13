@@ -222,8 +222,8 @@ const showProducts = (products) => {
     const allProducts = products.map((product) => product);
 
     for (const product of allProducts) {
-        const image = product.image;
 
+        // Add stars to card according to ratings
         const rate = product?.rating?.rate;
         let star = "";
         for (let i = 1; i <= 5; i++) {
@@ -235,7 +235,7 @@ const showProducts = (products) => {
         div.innerHTML = `
         <div class="single-product">
             <div>
-                <img class="product-image" src=${image}></img>
+                <img class="product-image" src=${product.image}></img>
             </div>
             <h3>${product.title}</h3>
             <p>Category: ${product.category}</p>
@@ -253,11 +253,11 @@ const showProducts = (products) => {
     }
 };
 
+// Add product to cart 
 let count = 0;
 const addToCart = (id, price) => {
     count = count + 1;
     updatePrice("price", price);
-
     updateTaxAndCharge();
     updateTotal();
     document.getElementById("total-Products").innerText = count;
